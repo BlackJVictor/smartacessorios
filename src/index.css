@@ -1,0 +1,94 @@
+@import "tailwindcss";
+
+/* ==========================================================================
+   ACESSIBILIDADE / ACCESSIBILITY STYLES & MODES
+   ========================================================================== */
+
+/* 1. Ajustes de Tamanho de Fonte */
+html.text-size-large {
+  font-size: 118%;
+}
+
+html.text-size-extralarge {
+  font-size: 135%;
+}
+
+/* 2. Modo Alto Contraste (Preto e Branco / High Contrast) */
+html.mode-high-contrast {
+  filter: contrast(160%) brightness(110%);
+}
+
+html.mode-high-contrast body {
+  background-color: #000000 !important;
+  color: #ffffff !important;
+}
+
+html.mode-high-contrast button,
+html.mode-high-contrast a,
+html.mode-high-contrast input,
+html.mode-high-contrast select,
+html.mode-high-contrast textarea {
+  outline: 2px solid #ffffff !important;
+  outline-offset: 1px;
+}
+
+/* 3. Modo Monocromático / Escala de Cinza (Para Daltonismo) */
+html.mode-monochrome {
+  filter: grayscale(100%) contrast(120%);
+}
+
+/* 4. Modo Amarelo sobre Preto (WCAG AAA - Baixa Visão) */
+html.mode-yellow-on-black body {
+  background-color: #000000 !important;
+  color: #ffeb3b !important;
+}
+
+html.mode-yellow-on-black * {
+  color: #ffeb3b !important;
+  border-color: #ffeb3b !important;
+}
+
+html.mode-yellow-on-black button,
+html.mode-yellow-on-black a {
+  outline: 2px solid #ffeb3b !important;
+}
+
+/* 5. Fonte para Dislexia / Leitura Facilitada */
+html.font-dyslexic,
+html.font-dyslexic body,
+html.font-dyslexic button,
+html.font-dyslexic input,
+html.font-dyslexic select,
+html.font-dyslexic textarea {
+  font-family: 'Comic Sans MS', 'Trebuchet MS', 'Arial Rounded MT Bold', sans-serif !important;
+  letter-spacing: 0.06em !important;
+  word-spacing: 0.16em !important;
+}
+
+/* 6. Destaque de Links e Elementos Clicáveis */
+html.highlight-links a,
+html.highlight-links button,
+html.highlight-links [role="button"] {
+  outline: 3px dashed #06b6d4 !important;
+  outline-offset: 3px !important;
+  text-decoration: underline !important;
+}
+
+/* 7. Redução de Movimento / Sem Animações */
+html.reduce-motion *,
+html.reduce-motion *::before,
+html.reduce-motion *::after {
+  animation-duration: 0.001ms !important;
+  animation-iteration-count: 1 !important;
+  transition-duration: 0.001ms !important;
+  scroll-behavior: auto !important;
+}
+
+/* 8. Espaçamento de Linhas Expandido */
+html.line-spacing-spacious p,
+html.line-spacing-spacious span,
+html.line-spacing-spacious div,
+html.line-spacing-spacious li {
+  line-height: 2 !important;
+}
+
